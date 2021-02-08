@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "874368005901",
+    "project_id": "onetoday2021",
+    "storage_bucket": "onetoday2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874368005901:android:7c7fc3d15733aa431ee244",
+        "android_client_info": {
+          "package_name": "com.jk.onetoday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874368005901-3ngo4n85g9fb8l1m5p5vkdjduke30ce5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu3CZGFCBIgdQQEhkBsGmlRoQdZzrRWc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874368005901-3ngo4n85g9fb8l1m5p5vkdjduke30ce5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
