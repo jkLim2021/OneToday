@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OneToday">
-        <activity android:name=".SinginActivity"></activity>
-        <activity android:name=".PasswordFindActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Memo_Write"></activity>
+        <activity android:name=".Diary_Tap1calender_Write" />
+        <activity android:name=".Diary_Tap1calender_feel" />
+        <activity android:name=".Movie_Search_Activity" />
+        <activity android:name=".Movie_Add_Activity" />
+        <activity android:name=".Settings_Activity" />
+        <activity android:name=".SinginActivity" /> <!-- 회원가입 -->
+        <activity android:name=".PasswordFindActivity" /> <!-- 비밀번호 잊어버렸을경우 -->
+        <activity android:name=".LoginActivity"> <!-- 로그인 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

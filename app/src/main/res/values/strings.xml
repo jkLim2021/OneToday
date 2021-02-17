@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">OneToday</string>
+    <string name="Tab1">일기</string>
+    <string name="Tab2">문화생활</string>
+    <string name="Tab3">메모</string>
+    <string name="Tab4">기프티콘</string>
 </resources>
