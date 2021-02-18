@@ -5,37 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Memo_Write_Activity"
-    android:background="#DFDFDF">
+    android:background="#DFDFDF"
+    tools:context=".Memo_Detail_Activity">
+
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3_write"
+        android:id="@+id/toolbar3_detail"
         app:titleTextColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Toolbar" />
 
-    <EditText
+    <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:textSize="16sp"
+        android:textColor="#FF333333"
         android:background="@drawable/et_back"
-        android:hint="제목을 입력하세요"
         android:padding="10dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/contents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="9"
         android:background="@drawable/et_back"
         android:gravity="top"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="4dp"
-        android:hint="내용을 입력하세요"
-        android:padding="10dp" />
+        android:padding="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="16sp"
+        android:textColor="#FF333333"/>
 
 
 </LinearLayout>

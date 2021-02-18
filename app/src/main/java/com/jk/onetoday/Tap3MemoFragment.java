@@ -9,7 +9,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +18,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +33,9 @@ public class Tap3MemoFragment extends Fragment {
     ArrayList<Memoitem> memoitems= new ArrayList<>();
     RecyclerView recyclerView;
     MemoAdapter adapter;
+
+    private FirebaseAuth firebaseAuth;
+
 
 
     @Nullable
@@ -51,10 +55,14 @@ public class Tap3MemoFragment extends Fragment {
         adapter = new MemoAdapter(getActivity(), memoitems);
         recyclerView.setAdapter(adapter); // 리사이클러뷰에 어댑터 연결
 
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        String userID = user.getUid();
+
         // memoitems.add(new Memoitem("aaa","aaaaa") );
 
         FirebaseDatabase firebaseDatabase= FirebaseDatabase.getInstance();
-        DatabaseReference rootRef= firebaseDatabase.getReference();
+        DatabaseReference rootRef= firebaseDatabase.getReference(userID);
 
         rootRef.child("Memoitems").addValueEventListener(new ValueEventListener() {
             @Override
@@ -77,6 +85,9 @@ public class Tap3MemoFragment extends Fragment {
                 Log.w("TAG: ", "Failed to read value", databaseError.toException());
             }
         });
+
+
+
 
 
         return view;
@@ -105,7 +116,7 @@ public class Tap3MemoFragment extends Fragment {
 
         switch (id){
             case R.id.Memo_add:
-                Intent intent= new Intent(getActivity(), Memo_Write.class);
+                Intent intent= new Intent(getActivity(), Memo_Write_Activity.class);
                 startActivity(intent);
 
                 break;

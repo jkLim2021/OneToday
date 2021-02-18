@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OneToday">
-        <activity android:name=".Memo_Write"></activity>
-        <activity android:name=".Diary_Tap1calender_Write" />
+        <activity android:name=".Memo_Detail_Activity"></activity>
+        <activity android:name=".Memo_Write_Activity" />
+        <activity android:name=".Diary_Tap1calender_Write" android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".Diary_Tap1calender_feel" />
         <activity android:name=".Movie_Search_Activity" />
         <activity android:name=".Movie_Add_Activity" />

@@ -1,6 +1,7 @@
 package com.jk.onetoday;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,7 +80,18 @@ public class MemoAdapter extends RecyclerView.Adapter {
                     int position = getAdapterPosition();
 
                     Memoitem item = items.get(position);
-                    Snackbar.make(v ,item.title +"\n"+item.contents , Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(v ,item.title +"\n"+item.contents+"\n"+position, Snackbar.LENGTH_LONG).show();
+
+
+                    String title= items.get(position).title;
+                    String contents= items.get(position).contents;
+
+                    Intent intent= new Intent(context, Memo_Detail_Activity.class);
+                    intent.putExtra("title", title);
+                    intent.putExtra("contents", contents);
+                    intent.putExtra("position", position);
+                    context.startActivity(intent);
+
 
 
                 }

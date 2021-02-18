@@ -1,16 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Settings_Activity">
+    tools:context=".Settings_Activity"
+    android:orientation="vertical">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="설정"-->
+<!--        android:textSize="25sp"-->
+<!--        android:layout_centerInParent="true"/>-->
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/userID"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="설정"
-        android:textSize="25sp"
-        android:layout_centerInParent="true"/>
+        android:text="userID"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"/>
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/logDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="탈퇴하기"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textColor="#FFFF0000"
+        android:layout_marginLeft="30dp"/>
+
+
+    <TextView
+        android:id="@+id/look"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="화면잠금"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="폰트"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"/>
+
+
+    <TextView
+        android:id="@+id/PDF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PDF로 저장"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"/>
+
+
+
+
+
+</LinearLayout>
